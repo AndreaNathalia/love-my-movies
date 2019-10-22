@@ -65,11 +65,11 @@ body{
 .button1 {
     border-radius: 8px;
     color: white;
-    font-size: 15px;
+    font-size: 30px;
     background-color:#1D9C4A;
     padding: 10px 30px; 
-    position: absolute;
-
+    position: absolute;  
+    left: 15%;  
 }
 
 .button2 {
@@ -125,5 +125,11 @@ p{
     top: -60px;
     left: -20px;
 }
+
+img{
+    float: left;
+    margin-right:20px;
+    margin-bottom:10px;
+  }
 
 
