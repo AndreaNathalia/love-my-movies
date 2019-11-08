@@ -10,7 +10,21 @@
         <!-- CSS  -->
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}"/>
-        
+
+        <!-- JavaScript  -->
+        <script type="text/javascript">
+            var inicio = 0; //se inicializa una variable en 0
+
+            function aumentar(){ 
+                var cantidad = document.getElementById('cantidad').value = ++inicio; 
+            }
+
+            function disminuir(){ 
+                var cantidad = document.getElementById('cantidad').value = --inicio; 
+            }
+
+        </script>
+
 
     </head>
 
@@ -32,8 +46,12 @@
                 <img src="https://image.tmdb.org/t/p/w500/{{pic2[x]}}" width="60" height="70"/>
                 {{overviews2[x]}} 
             </p>
-            <button class="button2">👍</button>
-            <button class="button2">👎</button>
+
+            <button class="button2" id='aumentar' onclick="aumentar()">👍</button>
+
+            <button class="button2" id='disminuir' onclick="disminuir()">👎</button>
+            <input type='text' id="cantidad" value="0">
+
         </div>
         {% endfor %}
         
@@ -58,8 +76,9 @@
                 <p>
                     {{overviews[i]}} 
                 </p>
-                <button class="button2">👍</button>
-                <button class="button2">👎</button>
+                <button class="button2" id='aumentar' onclick="aumentar()">👍</button>
+                <button class="button2" id='disminuir' onclick="disminuir()">👎</button>
+                <input type='text' id="cantidad" value="0">
             </div>
             {% endfor %}
 
